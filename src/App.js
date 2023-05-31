@@ -162,8 +162,6 @@ function App() {
     }
 ];
 
-    console.log(clothing.length)
-
     // functions for setting clothing items
     const setTop = (arr) =>{
       let random =  Math.floor(arr.length * Math.random()) 
@@ -207,10 +205,7 @@ function App() {
       setShoes(casualShoesArr)
       setTopDescription('Casual Top')
       setBottomDescription('Casual Bottom')
-      setShoesDescription('Casual Shoes')
-
-      // return console.log(casualArr)
-      
+      setShoesDescription('Casual Shoes')      
     }
 
     // getSport Function
@@ -237,7 +232,6 @@ function App() {
       setTopDescription('Sport Top')
       setBottomDescription('Sport Bottom')
       setShoesDescription('Sport Shoes')
-      // return console.log(sportArr)   
     }
 
 
@@ -255,17 +249,16 @@ function App() {
         return item.type === "bottom"
       })
       
-      // const formalShoesArr = formalArr.filter(item=>{
-      //   return item.type === "shoes"
-      // })
+      const formalShoesArr = formalArr.filter(item=>{
+        return item.type === "shoes"
+      })
 
       setTop(formalTops)
       setBottom(formalBottoms)
-      // setShoes(formalShoesArr)
+      setShoes(formalShoesArr)
       setTopDescription('Formal Top')
       setBottomDescription('Formal Bottom')
       setShoesDescription('Formal Shoes')
-      return console.log(formalArr)   
     }
 
 
@@ -301,14 +294,14 @@ function App() {
         <div className='clothing-divs' >
           <div>TOP</div>
           <div className='image-container'>
-            {/* <img src={topImage} alt ={topDescription}></img> */}
+            {topImage !== '' && <img className = "clothingImage"src={topImage} alt ={topDescription}/>}
           </div>
 
         </div>
         <div className='clothing-divs' >
           <div>BOTTOM</div>
           <div className='image-container'>
-            {/* <img src={bottomImage} alt ={bottomDescription}></img> */}
+            {bottomImage !== '' && <img className = "clothingImage" src={bottomImage} alt ={bottomDescription}/>}
 
           </div>
 
@@ -316,7 +309,7 @@ function App() {
         <div className='clothing-divs' >
           <div>SHOES</div>
           <div className='image-container'>
-            {/* <img src={shoesImage} alt ={shoesDescription}></img> */}
+            {shoesImage !== '' && <img className = "clothingImage" src={shoesImage} alt ={shoesDescription}/>}
           </div>
 
         </div>
