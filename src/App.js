@@ -267,39 +267,40 @@ function App() {
     <div id="outer-container">
       <div id="inner-container">
         <div id = "header" className="inner-divs">
-          <h3 style={{color: "blue",fontWeight: "bold", marginTop: "40px"}}>OUTFIT PLANNER</h3>
-          <p>FIND WHAT TO WEAR</p>
+        <h2 style={{color: "black",fontWeight: "bolder",  marginTop: "40px", fontFamily:  "Montserrat, sans-serif"}}>OUTFIT PLANNER</h2>
+
+          <p style={{color: "#333333",fontWeight: "normal",  marginTop: "1px", fontFamily:"Lato, sans-serif" , fontSize: "14px"}}>FIND WHAT TO WEAR</p>
         </div>
         <div id="button-div" className="inner-divs">
-          <p style={{fontWeight: "bold"}}>Fashion Style/Dress Code</p>
+        <p style={{fontWeight: "bold", fontfamily: "Playfair Display, serif"}}>DRESS CODE </p>
           <div 
           className="buttons"
           onClick={() => getCasual(clothing)}
           >
-            <p>Casual</p>
+            <p style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "25px"}}>Casual</p>
           </div>
           <div 
           className="buttons"
           onClick={() => getSport(clothing)}
           >
-            <p>Sport</p>
+            <p style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "25px"}}>Sport</p>
           </div>
           <div 
           className="buttons"
           onClick={() => getFormal(clothing)}
           >
-            <p>Formal</p>
+            <p style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "25px"}}>Formal</p>
           </div>
         </div>
         <div className='clothing-divs' >
-          <div>TOP</div>
+          <div style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "25px"}}>TOP</div>
           <div className='image-container'>
             {topImage !== '' && <img className = "clothingImage"src={topImage} alt ={topDescription}/>}
           </div>
 
         </div>
         <div className='clothing-divs' >
-          <div>BOTTOM</div>
+          <div style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "35px"}}>BOTTOM</div>
           <div className='image-container'>
             {bottomImage !== '' && <img className = "clothingImage" src={bottomImage} alt ={bottomDescription}/>}
 
@@ -307,7 +308,7 @@ function App() {
 
         </div>
         <div className='clothing-divs' >
-          <div>SHOES</div>
+          <div style={{fontWeight: "bold", fontfamily: "Playfair Display, serif", paddingTop: "35px"}}>SHOES</div>
           <div className='image-container'>
             {shoesImage !== '' && <img className = "clothingImage" src={shoesImage} alt ={shoesDescription}/>}
           </div>
